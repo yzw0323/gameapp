@@ -53,38 +53,3 @@ class SlzGameMenu {
     }
 
 }
-class SlzGamePlayground {
-    constructor(root) {
-        this.root = root;
-        this.$playground = $(`<div>游戏界面</div>`);
-
-        this.hide();
-        this.root.$slz_game.append(this.$playground);
-
-        this.start();
-    }
-
-    start() {
-    }
-
-    show() {    // 打开playground界面
-        this.$playground.show();
-    }
-
-    hide() {    // 关闭playground界面
-        this.$playground.hide();
-    }
-}
-class SlzGame {
-    constructor(id) {
-        this.id = id;
-        this.$slz_game = $('#' + id);
-        this.menu = new SlzGameMenu(this);
-        this.playground = new SlzGamePlayground(this);
-
-        this.start();
-    }
-
-    start() {
-    }
-}
